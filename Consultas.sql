@@ -6,7 +6,7 @@
 select pr.nombre as Profesor , pr.apellido1 as "Apellido 1",pr.apellido2 as "Apellido 2", dp.nombre as Departamento 
 from profesor as pr
 left join departamento as dp on dp.idDepartamento=pr.idProfesor;
-
+-- 2
 
 -- 2. Devuelve un listado con los profesores que no están asociados a un departamento.
 
