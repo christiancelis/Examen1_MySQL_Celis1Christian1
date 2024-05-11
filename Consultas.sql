@@ -157,7 +157,7 @@ where pr.nombre is null;
 
 select pr.nombre as "Profesor" 
 from profesor as pr
-inner join departamento as dp on dp.idDepartamento=pr.idProfesor
+inner join departamento as dp on dp.idDepartamento=pr.idDepartamento
 left join asignatura as asig on asig.idProfesor = pr.idProfesor
 where asig.idAsignatura is null;
 
