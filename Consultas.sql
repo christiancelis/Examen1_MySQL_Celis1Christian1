@@ -5,21 +5,21 @@
 
 select pr.nombre as Profesor , pr.apellido1 as "Apellido 1",pr.apellido2 as "Apellido 2", dp.nombre as Departamento 
 from profesor as pr
-left join departamento as dp on dp.idDepartamento=pr.idProfesor;
+left join departamento as dp on dp.idDepartamento=pr.idDepartamento;
 -- 2
 
 -- 2. Devuelve un listado con los profesores que no están asociados a un departamento.
 
 select pr.nombre as Profesor , pr.apellido1 as "Apellido 1",pr.apellido2 as "Apellido 2"
 from profesor as pr
-left join departamento as dp on dp.idDepartamento=pr.idProfesor
+left join departamento as dp on dp.idDepartamento=pr.idDepartamento
 where dp.nombre is null ;
 
 -- 3.Devuelve un listado con los departamentos que no tienen profesores asociados.
 
 select dp.nombre as Departamento 
 from profesor as pr
-right join departamento as dp on dp.idDepartamento=pr.idProfesor
+right join departamento as dp on dp.idDepartamento=pr.idDepartamento
 where pr.nombre is null;
 
 -- Devuelve un listado con los profesores que no imparten ninguna asignatura.
@@ -141,7 +141,7 @@ limit 1;
 
 select pr.nombre as Profesor , pr.apellido1 as "Apellido 1",pr.apellido2 as "Apellido 2"
 from profesor as pr
-left join departamento as dp on dp.idDepartamento=pr.idProfesor
+left join departamento as dp on dp.idDepartamento=pr.idDepartamento
 where dp.nombre is null ;
 
 
@@ -149,7 +149,7 @@ where dp.nombre is null ;
 
 select dp.nombre as Departamento 
 from profesor as pr
-right join departamento as dp on dp.idDepartamento=pr.idProfesor
+right join departamento as dp on dp.idDepartamento=pr.idDepartamento
 where pr.nombre is null;
 
 
